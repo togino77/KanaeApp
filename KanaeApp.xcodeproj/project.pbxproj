@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		E50923B323DA04D4008D5C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923B223DA04D4008D5C76 /* AppDelegate.swift */; };
 		E50923B523DA04D4008D5C76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923B423DA04D4008D5C76 /* SceneDelegate.swift */; };
-		E50923B723DA04D4008D5C76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923B623DA04D4008D5C76 /* ViewController.swift */; };
+		E50923B723DA04D4008D5C76 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923B623DA04D4008D5C76 /* InputViewController.swift */; };
 		E50923BA23DA04D4008D5C76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50923B823DA04D4008D5C76 /* Main.storyboard */; };
 		E50923BC23DA04D6008D5C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E50923BB23DA04D6008D5C76 /* Assets.xcassets */; };
 		E50923BF23DA04D6008D5C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50923BD23DA04D6008D5C76 /* LaunchScreen.storyboard */; };
 		E50923CA23DA04D6008D5C76 /* KanaeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923C923DA04D6008D5C76 /* KanaeAppTests.swift */; };
 		E50923D523DA0720008D5C76 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923D423DA0720008D5C76 /* ApiManager.swift */; };
 		E50923D623DA0720008D5C76 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923D423DA0720008D5C76 /* ApiManager.swift */; };
+		E50923D823DA175F008D5C76 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923D723DA175F008D5C76 /* OutputViewController.swift */; };
+		E50923D923DA175F008D5C76 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923D723DA175F008D5C76 /* OutputViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,7 @@
 		E50923AF23DA04D4008D5C76 /* KanaeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanaeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50923B223DA04D4008D5C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E50923B423DA04D4008D5C76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E50923B623DA04D4008D5C76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E50923B623DA04D4008D5C76 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		E50923B923DA04D4008D5C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E50923BB23DA04D6008D5C76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E50923BE23DA04D6008D5C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		E50923C923DA04D6008D5C76 /* KanaeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaeAppTests.swift; sourceTree = "<group>"; };
 		E50923CB23DA04D6008D5C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E50923D423DA0720008D5C76 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		E50923D723DA175F008D5C76 /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +88,8 @@
 				E50923B223DA04D4008D5C76 /* AppDelegate.swift */,
 				E50923B423DA04D4008D5C76 /* SceneDelegate.swift */,
 				E50923D423DA0720008D5C76 /* ApiManager.swift */,
-				E50923B623DA04D4008D5C76 /* ViewController.swift */,
+				E50923B623DA04D4008D5C76 /* InputViewController.swift */,
+				E50923D723DA175F008D5C76 /* OutputViewController.swift */,
 				E50923B823DA04D4008D5C76 /* Main.storyboard */,
 				E50923BB23DA04D6008D5C76 /* Assets.xcassets */,
 				E50923BD23DA04D6008D5C76 /* LaunchScreen.storyboard */,
@@ -204,8 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50923D823DA175F008D5C76 /* OutputViewController.swift in Sources */,
 				E50923D523DA0720008D5C76 /* ApiManager.swift in Sources */,
-				E50923B723DA04D4008D5C76 /* ViewController.swift in Sources */,
+				E50923B723DA04D4008D5C76 /* InputViewController.swift in Sources */,
 				E50923B323DA04D4008D5C76 /* AppDelegate.swift in Sources */,
 				E50923B523DA04D4008D5C76 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E50923D623DA0720008D5C76 /* ApiManager.swift in Sources */,
+				E50923D923DA175F008D5C76 /* OutputViewController.swift in Sources */,
 				E50923CA23DA04D6008D5C76 /* KanaeAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
