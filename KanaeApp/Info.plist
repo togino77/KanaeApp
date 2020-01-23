@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>GOO_APP_ID</key>
+	<string>43607a16912e58b568683fea94bfe2ce62a3751a59a8574ac5b9f05e939ea34a</string>
+	<key>GOO_API_SERVER_URL</key>
+	<string>https://labs.goo.ne.jp/api/</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

@@ -13,9 +13,12 @@ class ApiManager {
     private init() {
         
     }
+    
+    var server = Bundle.main.infoDictionary!["GOO_API_SERVER_URL"] as! String
+    var app_id = Bundle.main.infoDictionary!["GOO_APP_ID"] as! String
 
     func call(path: String, query: [String:String], completionHandler: @escaping (([String:Any]?, URLResponse?, Error?) -> Void)) {
-        guard let url = URL(string: "https://labs.goo.ne.jp/api/" + path) else {
+        guard let url = URL(string: server + path) else {
             return
         }
         var request = URLRequest(url: url)
@@ -23,11 +26,11 @@ class ApiManager {
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        var body = ["app_id": "43607a16912e58b568683fea94bfe2ce62a3751a59a8574ac5b9f05e939ea34a"]
+        var body = ["app_id": app_id]
         body.merge(query){$1}
         request.httpBody = Array(body.keys).map({$0 + "=" + body[$0]!}).joined(separator: "&").data(using: String.Encoding.utf8)
+
         let session = URLSession(configuration: .default)
-        
         let task = session.dataTask(with: request, completionHandler: {(data, response, error) in
             var json: [String:Any]?
             if let data = data {
