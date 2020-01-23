@@ -18,6 +18,8 @@
 		E50923D623DA0720008D5C76 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923D423DA0720008D5C76 /* ApiManager.swift */; };
 		E50923D823DA175F008D5C76 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923D723DA175F008D5C76 /* OutputViewController.swift */; };
 		E50923D923DA175F008D5C76 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923D723DA175F008D5C76 /* OutputViewController.swift */; };
+		E50923DB23DA1EC3008D5C76 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923DA23DA1EC3008D5C76 /* RoundButton.swift */; };
+		E50923DC23DA1EC3008D5C76 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923DA23DA1EC3008D5C76 /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		E50923CB23DA04D6008D5C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E50923D423DA0720008D5C76 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		E50923D723DA175F008D5C76 /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
+		E50923DA23DA1EC3008D5C76 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,7 @@
 				E50923BB23DA04D6008D5C76 /* Assets.xcassets */,
 				E50923BD23DA04D6008D5C76 /* LaunchScreen.storyboard */,
 				E50923C023DA04D6008D5C76 /* Info.plist */,
+				E50923DA23DA1EC3008D5C76 /* RoundButton.swift */,
 			);
 			path = KanaeApp;
 			sourceTree = "<group>";
@@ -208,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50923DB23DA1EC3008D5C76 /* RoundButton.swift in Sources */,
 				E50923D823DA175F008D5C76 /* OutputViewController.swift in Sources */,
 				E50923D523DA0720008D5C76 /* ApiManager.swift in Sources */,
 				E50923B723DA04D4008D5C76 /* InputViewController.swift in Sources */,
@@ -220,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50923DC23DA1EC3008D5C76 /* RoundButton.swift in Sources */,
 				E50923D623DA0720008D5C76 /* ApiManager.swift in Sources */,
 				E50923D923DA175F008D5C76 /* OutputViewController.swift in Sources */,
 				E50923CA23DA04D6008D5C76 /* KanaeAppTests.swift in Sources */,
