@@ -14,6 +14,8 @@
 		E50923BC23DA04D6008D5C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E50923BB23DA04D6008D5C76 /* Assets.xcassets */; };
 		E50923BF23DA04D6008D5C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50923BD23DA04D6008D5C76 /* LaunchScreen.storyboard */; };
 		E50923CA23DA04D6008D5C76 /* KanaeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923C923DA04D6008D5C76 /* KanaeAppTests.swift */; };
+		E50923D523DA0720008D5C76 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923D423DA0720008D5C76 /* ApiManager.swift */; };
+		E50923D623DA0720008D5C76 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50923D423DA0720008D5C76 /* ApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 		E50923C523DA04D6008D5C76 /* KanaeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanaeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50923C923DA04D6008D5C76 /* KanaeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaeAppTests.swift; sourceTree = "<group>"; };
 		E50923CB23DA04D6008D5C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E50923D423DA0720008D5C76 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 			children = (
 				E50923B223DA04D4008D5C76 /* AppDelegate.swift */,
 				E50923B423DA04D4008D5C76 /* SceneDelegate.swift */,
+				E50923D423DA0720008D5C76 /* ApiManager.swift */,
 				E50923B623DA04D4008D5C76 /* ViewController.swift */,
 				E50923B823DA04D4008D5C76 /* Main.storyboard */,
 				E50923BB23DA04D6008D5C76 /* Assets.xcassets */,
@@ -200,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50923D523DA0720008D5C76 /* ApiManager.swift in Sources */,
 				E50923B723DA04D4008D5C76 /* ViewController.swift in Sources */,
 				E50923B323DA04D4008D5C76 /* AppDelegate.swift in Sources */,
 				E50923B523DA04D4008D5C76 /* SceneDelegate.swift in Sources */,
@@ -210,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50923D623DA0720008D5C76 /* ApiManager.swift in Sources */,
 				E50923CA23DA04D6008D5C76 /* KanaeAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
