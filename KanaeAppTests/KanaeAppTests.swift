@@ -31,10 +31,22 @@ class KanaeAppTests: XCTestCase {
         manager.call(path: "hiragana", query: query, completionHandler: {(json, response, error) in
             XCTAssertNil(error)
             XCTAssertNotNil(json)
-            print(json?.debugDescription)
             expectation?.fulfill()
         })
         self.waitForExpectations(timeout: 5.0, handler: nil)
+    }
+    
+    func testCallHiragana() {
+        let expectation: XCTestExpectation? = self.expectation(description: "call")
+        
+        let kanji = "今日はいい天気です"
+        manager.hiragana(sentence: kanji, completionHandler: {(converted, error) in
+            XCTAssertNil(error)
+            XCTAssertEqual(converted, "きょうは いい てんきです")
+            expectation?.fulfill()
+        })
+        self.waitForExpectations(timeout: 5.0, handler: nil)
+
     }
 
 }

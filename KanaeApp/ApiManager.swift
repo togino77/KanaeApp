@@ -13,13 +13,32 @@ class ApiManager {
     private init() {
         
     }
-    
+
+    enum ApiError: Error {
+        case url
+        case error(String)
+    }
+
     var server = Bundle.main.infoDictionary!["GOO_API_SERVER_URL"] as! String
     var app_id = Bundle.main.infoDictionary!["GOO_APP_ID"] as! String
+    
+    func hiragana(sentence: String, completionHandler: @escaping ((String?, Error?) -> Void)) {
+        var query = ["output_type": "hiragana"]
+        query["sentence"] = sentence
+        
+        self.call(path: "hiragana", query: query, completionHandler: {(json, response, error) in
+            if let json = json, let converted = json["converted"] as? String {
+                completionHandler(converted, error)
+            }
+            else{
+                completionHandler(nil, ApiError.error("json error"))
+            }
+        })
+    }
 
     func call(path: String, query: [String:String], completionHandler: @escaping (([String:Any]?, URLResponse?, Error?) -> Void)) {
         guard let url = URL(string: server + path) else {
-            return
+            return completionHandler(nil, nil, ApiError.url)
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -37,7 +56,6 @@ class ApiManager {
                 do {
                     json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:Any]
                 } catch {
-                    //TODO: サーバからのレスポンスが JSON でパースできない時の対応
                     print("JSON serialization error")
                 }
             }
