@@ -27,6 +27,12 @@
                                         <state key="normal" title="ひらがなに変換">
                                             <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="4"/>
@@ -49,6 +55,10 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="RDs-1U-Il3"/>
+                                            <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Ws3-TV-FXP"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -72,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Sm7-ab-B6S"/>
                     <connections>
+                        <outlet property="doHiraganaButton" destination="mfQ-MB-y6p" id="Fyz-9f-gtI"/>
                         <outlet property="inputTextField" destination="azt-0D-PSj" id="YHp-c0-d66"/>
                         <segue destination="UaZ-za-Gf3" kind="show" identifier="goOutput" id="AJt-5h-La8"/>
                     </connections>
@@ -125,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upB-4l-EZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1908.6956521739132" y="85.714285714285708"/>
+            <point key="canvasLocation" x="2048" y="86"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mog-MG-UaJ">

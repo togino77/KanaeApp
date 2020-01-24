@@ -10,10 +10,14 @@ import UIKit
 
 class InputViewController: UIViewController {
     @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var doHiraganaButton: RoundButton!
     var outputText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setEnableForDoHiraganaButton()
+
     }
     
     @IBAction func touchUpHiragana(_ sender: Any) {
@@ -38,5 +42,14 @@ class InputViewController: UIViewController {
             break
         }
     }
+    
+    func setEnableForDoHiraganaButton() {
+        doHiraganaButton.isEnabled = (inputTextField.text?.count ?? 0) > 0
+    }
+    
+    @IBAction func textFieldEditingChanged(_ sender: Any) {
+        self.setEnableForDoHiraganaButton()
+    }
+    
 }
 

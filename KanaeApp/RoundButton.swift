@@ -18,7 +18,7 @@ import UIKit
     override func draw(_ rect: CGRect) {
         layer.cornerRadius = cornerRadius
         layer.borderWidth = borderWidth
-        layer.borderColor = borderColor.cgColor
+        layer.borderColor = (self.isEnabled || borderColor == UIColor.clear) ? borderColor.cgColor : UIColor.gray.cgColor
         clipsToBounds = (cornerRadius > 0)
         
         super.draw(rect)
