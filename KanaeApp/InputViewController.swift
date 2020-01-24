@@ -36,6 +36,9 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         self.beginConnection()
         manager.hiragana(sentence: self.inputTextField.text!, completionHandler: {(converted, error) in
             self.endConnection()
+            if let error = error {
+                return self.errorProc(error: error)
+            }
             if let converted = converted {
                 self.outputText = converted
                 self.performSegue(withIdentifier: "goOutput", sender: nil)
@@ -76,6 +79,13 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     func endConnection() {
         connecting = false
         activityIndicatorView.stopAnimating()
-    }    
+    }
+    
+    private func errorProc(error: Error) {
+        //TODO: error の種類や内容によって対応を変える。とりあえずダイアログで表示しているだけ。
+        let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true)
+    }
 }
 
