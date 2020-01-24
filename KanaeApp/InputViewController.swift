@@ -12,23 +12,34 @@ class InputViewController: UIViewController {
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var doHiraganaButton: RoundButton!
     var outputText = ""
+    var connecting = false
+    var activityIndicatorView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setEnableForDoHiraganaButton()
 
+        activityIndicatorView.center = view.center
+        activityIndicatorView.style = .large
+        activityIndicatorView.color = .gray
+        view.addSubview(activityIndicatorView)
     }
     
     @IBAction func touchUpHiragana(_ sender: Any) {
         let manager = ApiManager.manager
+        
+        if connecting {
+            return
+        }
+        self.beginConnection()
         manager.hiragana(sentence: self.inputTextField.text!, completionHandler: {(converted, error) in
+            self.endConnection()
             if let converted = converted {
                 self.outputText = converted
                 self.performSegue(withIdentifier: "goOutput", sender: nil)
             }
         })
-
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,5 +62,14 @@ class InputViewController: UIViewController {
         self.setEnableForDoHiraganaButton()
     }
     
+    func beginConnection() {
+        connecting = true
+        activityIndicatorView.startAnimating()
+    }
+    
+    func endConnection() {
+        connecting = false
+        activityIndicatorView.stopAnimating()
+    }    
 }
 
