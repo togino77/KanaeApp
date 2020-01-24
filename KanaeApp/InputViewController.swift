@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputViewController: UIViewController {
+class InputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var doHiraganaButton: RoundButton!
     var outputText = ""
@@ -19,6 +19,7 @@ class InputViewController: UIViewController {
         super.viewDidLoad()
         
         self.setEnableForDoHiraganaButton()
+        inputTextField.delegate = self
 
         activityIndicatorView.center = view.center
         activityIndicatorView.style = .large
@@ -52,6 +53,11 @@ class InputViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func setEnableForDoHiraganaButton() {

@@ -54,7 +54,7 @@
                                             <constraint firstAttribute="height" constant="34" id="B5i-7S-HCg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <connections>
                                             <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="RDs-1U-Il3"/>
                                             <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Ws3-TV-FXP"/>
